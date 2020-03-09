@@ -1,0 +1,153 @@
+<style type="text/css" media="screen">
+
+  /* FLEX SOLUTION */
+
+  .wrapper-flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: stretch;
+  }
+
+  .wrapper-flex > * {
+    margin-bottom: 1rem;
+  }
+
+  .wrapper-flex .a, .wrapper-flex .h {
+    flex-basis: 66%;
+  }
+
+  .wrapper-flex .c {
+    flex-basis: 100%;
+  }
+
+  .wrapper-flex .b, .wrapper-flex .d, .wrapper-flex .e, .wrapper-flex .f, .wrapper-flex .g {
+    flex-basis: 32%;
+  }
+
+  /* GRID SOLUTION */
+
+  .wrapper-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+  }
+
+  .wrapper-grid > * {
+    margin-bottom: 1rem;
+  }
+
+  .wrapper-grid .a, .wrapper-grid .h {
+    grid-column: span 2;
+  }
+
+  .wrapper-grid .c {
+    grid-column: span 3;
+  }
+
+  /* GRID AREA */
+
+  .wrapper-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "a a b"
+    "c c c"
+    "d e f"
+    "g h h";
+    grid-gap: 1rem;
+  }
+
+  .wrapper-area > * {
+    margin-bottom: 1rem;
+  }
+
+  .wrapper-area .a {
+    grid-area: a;
+  }
+
+  .wrapper-area .h {
+    grid-area: h;
+  }
+
+  .wrapper-area .c {
+    grid-area: c;
+  }
+
+  .a, .b, .c, .d, .e, .f, .g, .h {
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+  }
+
+  .a {
+    background-color: red;
+  }
+
+  .b {
+    background-color: blue;
+  }
+
+  .c {
+    background-color: green;
+  }
+
+  .d {
+    background-color: pink;
+  }
+
+  .e {
+    background-color: purple;
+  }
+
+  .f {
+    background-color: navy;
+  }
+
+  .g {
+    background-color: grey;
+  }
+
+  .h {
+    background-color: yellow;
+  }
+
+</style>
+
+<div class="wrapper-flex">
+  <div class="a">A</div>
+  <div class="b">B</div>
+  <div class="c">C</div>
+  <div class="d">D</div>
+  <div class="e">E</div>
+  <div class="f">F</div>
+  <div class="g">G</div>
+  <div class="h">H</div>
+</div>
+
+<br><br><br>
+
+<div class="wrapper-grid">
+  <div class="a">A</div>
+  <div class="b">B</div>
+  <div class="c">C</div>
+  <div class="d">D</div>
+  <div class="e">E</div>
+  <div class="f">F</div>
+  <div class="g">G</div>
+  <div class="h">H</div>
+</div>
+
+
+<br><br><br>
+
+<div class="wrapper-area">
+  <div class="a">A</div>
+  <div class="b">B</div>
+  <div class="c">C</div>
+  <div class="d">D</div>
+  <div class="e">E</div>
+  <div class="f">F</div>
+  <div class="g">G</div>
+  <div class="h">H</div>
+</div>
