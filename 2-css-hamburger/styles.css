@@ -1,0 +1,80 @@
+main {
+  padding-top: 100px;
+}
+
+main div {
+  min-height: 750px;
+}
+
+.hamburger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+}
+
+.main-menu {
+  position: fixed;
+  display: none;
+  left: -200px;
+  top: 0;
+  height: 100%;
+  overflow-x: visible;
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+.main-menu ul{
+  list-style: none;
+  margin: 0;
+  padding-top: 2.5em;
+  min-height: 100%;
+  width: 200px;
+  background-color: #2b2b2b;
+}
+
+.main-menu a {
+  display: block;
+  padding: 0.75em;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #2b2b2b;
+}
+
+.main-menu li:first-child a {
+  border-top: 1px solid #2b2b2b;
+}
+
+.main-menu a:hover, .main-menu a:focus {
+  background: #2b2b2b;
+  text-decoration: underline;
+}
+
+.main-menu:target {
+  display: block;
+  left: 0;
+  outline: none;
+  z-index: 1000;
+}
+
+.main-menu:target .hamburger {
+  z-index: 1000;
+}
+
+.main-menu:target ul {
+  position: relative;
+  z-index: 1000;
+}
+
+.main-menu:target + .backdrop {
+  position: fixed;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background-color: rgba(0,0,0,0.5);
+  cursor: default;
+}
